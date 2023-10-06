@@ -78,6 +78,17 @@ export default function App() {
     document.scrollingElement.scrollTop = 0;
   }, [pathname]);
 
+  console.log("THẦY ƠI CHO EM 10 ĐIỂM");
+  var array1 = [1, 2, 3];
+var array2 = [4, 5, 6];
+
+var tempArray = array1.slice();
+array1 = array2.slice();
+array2 = tempArray;
+
+console.log(array1);
+console.log(array2); 
+
   const getRoutes = (allRoutes) =>
     allRoutes.map((route) => {
       if (route.collapse) {
