@@ -78,11 +78,12 @@ export default function App() {
     document.scrollingElement.scrollTop = 0;
   }, [pathname]);
 
-  console.log("THẦY ƠI CHO EM 10 ĐIỂM");
-  let a = [];
-  for (let i = 0; i < 10; i++) { 
-    a.push(i);
-  }
+
+  let string = 'THIENPROVIP';
+  let newString = string.substring(0, 5);
+  let myName = newString.replace("EN", "ENDTRAI");
+  console.log(myName);
+
 
   const getRoutes = (allRoutes) =>
     allRoutes.map((route) => {
