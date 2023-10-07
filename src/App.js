@@ -79,15 +79,10 @@ export default function App() {
   }, [pathname]);
 
   console.log("THẦY ƠI CHO EM 10 ĐIỂM");
-  var array1 = [1, 2, 3];
-var array2 = [4, 5, 6];
-
-var tempArray = array1.slice();
-array1 = array2.slice();
-array2 = tempArray;
-
-console.log(array1);
-console.log(array2); 
+  let a = [];
+  for (let i = 0; i < 10; i++) { 
+    a.push(i);
+  }
 
   const getRoutes = (allRoutes) =>
     allRoutes.map((route) => {
