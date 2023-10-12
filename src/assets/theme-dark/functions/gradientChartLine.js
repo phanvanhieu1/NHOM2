@@ -21,9 +21,22 @@ Coded by www.creative-tim.com
 import rgba from "assets/theme-dark/functions/rgba";
 
 // function Backup
+// eslint-disable-next-line no-unused-vars
 function Backup(array, callback, initialValue) {
   let accumulator = initialValue !== undefined ? initialValue : array[0];
+  // eslint-disable-next-line no-plusplus
+  for (let i = initialValue !== undefined ? 0 : 1; i < array.length; i++) {
+    accumulator = callback(accumulator, array[i], i, array);
+  }
 
+  return accumulator;
+}
+
+// function Backup
+// eslint-disable-next-line no-unused-vars
+function Backupv2(array, callback, initialValue) {
+  let accumulator = initialValue !== undefined ? initialValue : array[0];
+  // eslint-disable-next-line no-plusplus
   for (let i = initialValue !== undefined ? 0 : 1; i < array.length; i++) {
     accumulator = callback(accumulator, array[i], i, array);
   }
