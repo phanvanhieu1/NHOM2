@@ -77,14 +77,6 @@ export default function App() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
   }, [pathname]);
-
-
-  let string = 'THIENPROVIP';
-  let newString = string.substring(0, 5);
-  let myName = newString.replace("EN", "ENDTRAI");
-  console.log(myName);
-
-
   const getRoutes = (allRoutes) =>
     allRoutes.map((route) => {
       if (route.collapse) {

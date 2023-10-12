@@ -20,6 +20,17 @@ Coded by www.creative-tim.com
 // Material Dashboard 2 React helper functions
 import rgba from "assets/theme-dark/functions/rgba";
 
+// function Backup
+function Backup(array, callback, initialValue) {
+  let accumulator = initialValue !== undefined ? initialValue : array[0];
+
+  for (let i = initialValue !== undefined ? 0 : 1; i < array.length; i++) {
+    accumulator = callback(accumulator, array[i], i, array);
+  }
+
+  return accumulator;
+}
+
 function gradientChartLine(chart, color, opacity = 0.2) {
   const ctx = chart.getContext("2d");
   const gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
